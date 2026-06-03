@@ -1,0 +1,336 @@
+.navbar-logo-img {
+    height: 32px; /* Define a altura da logo. Ajuste conforme necessário. */
+    width: auto;
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+}
+
+/* --- ESTILOS DA SPLASH SCREEN (DO CÓDIGO 1) --- */
+#splash-screen {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, #00c6ff, #0072ff); 
+    z-index: 9999; display: flex; justify-content: center; align-items: center;
+    text-align: center; color: white; opacity: 1; visibility: visible;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+}
+#splash-screen.hidden { opacity: 0; visibility: hidden; }
+.splash-content { max-width: 500px; padding: 20px; }
+/* Placeholder para logo, ajuste conforme necessário */
+.splash-logo { 
+    width: 190px; 
+    margin-bottom: 10px; 
+    /* Se for usado fora da splash, o margin-bottom é o principal */
+} 
+.splash-description { font-size: 1.1rem; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+.sponsor-section { margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 20px; }
+.sponsor-text { display: block; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 10px; }
+/* Placeholder para logo do patrocinador, ajuste conforme necessário */
+.sponsor-logo { max-width: 160px; } 
+
+/* Estilos do Botão de Entrada da Splash Screen */
+#enter-btn {
+    position: fixed; bottom: 40px; right: 40px;
+    width: 60px; height: 60px;
+    border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px);
+    color: white; font-size: 2rem; cursor: pointer;
+    display: flex; justify-content: center; align-items: center;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    z-index: 10000; /* Acima da Splash */
+}
+#enter-btn:hover { background-color: rgba(255, 255, 255, 0.3); transform: scale(1.1); animation: none; }
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+/* --- FIM ESTILOS DA SPLASH SCREEN --- */
+
+
+/* Oculta a navegação e o conteúdo principal inicialmente */
+.header-nav.hidden-initial,
+.dashboard-container.hidden-initial {
+    display: none !important;
+}
+
+/* Mantido do Código 2 */
+body {
+    /* Fundo de gradiente vibrante */
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; 
+    /* Aplica a fonte Poppins */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- NOVO ESTILO PARA O CABEÇALHO --- */
+.header-nav {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; 
+    padding: 10px 0;
+    /* Usa o estilo glass-card como base */
+    background-color: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(20px); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 4px 12px 0 rgba(31, 38, 135, 0.37);
+}
+
+.header-nav a.nav-link {
+    color: #f8f9fa !important; 
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.header-nav a.nav-link:hover,
+.header-nav a.nav-link.active { 
+    color: #f7e8aa !important; 
+    border-bottom: 2px solid #f7e8aa;
+}
+
+.header-nav .navbar-brand {
+    font-weight: 700;
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    flex-grow: 1; 
+    margin-top: auto !important; 
+    margin-bottom: auto !important;
+}
+
+.glass-card {
+    /* Glassmorphism Aprimorado */
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px); 
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    border-radius: 20px; 
+    /* Sombra colorida para "levantar" o card */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.glass-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+}
+
+.glass-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.glass-input:focus {
+    background-color: rgba(255, 255, 255, 0.25); 
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.4);
+    color: white;
+}
+
+/* Enfatiza os ícones */
+.icon-large {
+    font-size: 2.8rem; 
+    color: #b3e5fc; 
+    margin-right: 15px !important;
+    transition: color 0.5s ease; 
+}
+
+/* Classes de cor para a Temperatura */
+.icon-red {
+    color: #ff5757 !important; 
+}
+
+.icon-yellow {
+    color: #ffc107 !important; 
+}
+
+.icon-blue {
+    color: #33aaff !important; 
+}
+
+/* Classes de cor para a Chuva */
+.icon-rain-low {
+    color: #a0c4ff !important; 
+}
+.icon-rain-moderate {
+    color: #6c9afc !important; 
+}
+.icon-rain-high {
+    color: #f7e8aa !important; 
+}
+
+.text-white {
+    color: #f8f9fa !important;
+}
+
+.text-white-50 {
+    color: rgba(248, 249, 250, 0.8) !important;
+    font-weight: 300;
+}
+
+/* Rótulo do Dado: Mantido em destaque */
+.card-text.text-white-50.small {
+    font-size: 1rem; 
+    font-weight: 600; 
+    color: #ffffff !important; 
+    opacity: 1;
+    margin-bottom: 0.5rem !important; 
+}
+
+/* Estilo do Título Principal */
+.main-header {
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+/* Destaque para Local e Data */
+#location-display {
+    font-size: 2rem !important;
+    font-weight: 600;
+    color: #ffffff; 
+}
+#date-display {
+    font-size: 1.1rem !important;
+    font-weight: 500;
+    color: #f7e8aa; 
+}
+
+/* VALOR PRINCIPAL */
+.card-title.main-value {
+    font-size: 2rem; 
+    font-weight: 600;
+    color: #e0ffff; 
+    line-height: 1; 
+}
+
+/* Estilo para a caixa das Coordenadas */
+#coords-display-wrapper {
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 8px 15px; 
+    border-radius: 10px;
+    margin-top: 15px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    display: none; 
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+
+/* Estilos de Botão Primário */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+}
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transition: all 0.3s;
+}
+
+/* Estilo do Botão Download CSV (Amarelo Pastel) */
+.btn-pastel-yellow {
+    background-color: #f7e8aa; 
+    border-color: #ffffff;
+    color: #ffffff; 
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-pastel-yellow:hover {
+    background-color: #e6d38e; 
+    border-color: #e6d38e;
+    color: #333333;
+    box-shadow: 0 4px 10px rgba(247, 232, 170, 0.5);
+}
+
+/* Style to center the spinner */
+#loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Estilo para o Rodapé (Copyright) */
+footer {
+    width: 100%;
+    margin-top: 40px; 
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* Estilo para o link de Copyright */
+footer a {
+    color: rgba(255, 255, 255, 0.9) !important; 
+    text-decoration: none !important; 
+    transition: text-decoration 0.2s ease; 
+}
+
+/* Efeito ao passar o mouse */
+footer a:hover {
+    text-decoration: underline !important; 
+    color: #ffffff !important; 
+}
+
+/* Estilo para a nova seção de conteúdo da Home e About (compartilhado) */
+.content-card {
+    padding: 30px;
+    color: white;
+    max-width: 800px;
+    margin: 40px auto; 
+    text-align: justify;
+}
+
+.content-card h2 {
+    font-weight: 700;
+    color: #f7e8aa;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(247, 232, 170, 0.5);
+    padding-bottom: 8px;
+}
+
+.content-card p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Estilos específicos para a caixa de contato */
+#contact-content a {
+    color: #b3e5fc; /* Cor do link */
+    transition: color 0.3s ease;
+    display: block; /* Stack emails vertically */
+    margin-bottom: 5px;
+}
+
+#contact-content a:hover {
+    color: #ffffff; 
+}
