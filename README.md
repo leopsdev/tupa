@@ -6,7 +6,7 @@ O projeto foi desenvolvido originalmente como parte de um desafio do **NASA Spac
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - **Busca por Localização Dinâmica**: Geocodificação integrada usando a API do *Nominatim (OpenStreetMap)* para buscar qualquer cidade do mundo.
 - **Dados Históricos e Previsões**: Conexão direta com a API **NASA POWER (Prediction Of Worldwide Energy Resources)** para puxar dados meteorológicos diários de coordenadas precisas.
@@ -23,7 +23,7 @@ O projeto foi desenvolvido originalmente como parte de um desafio do **NASA Spac
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Estrutura**: HTML5 (tags semânticas e acessibilidade).
 - **Estilização**: CSS3 Vanilla (regras customizadas de Glassmorphic Design) e Bootstrap 5.3.3.
@@ -32,7 +32,7 @@ O projeto foi desenvolvido originalmente como parte de um desafio do **NASA Spac
 
 ---
 
-## 🤝 Créditos
+## Créditos
 
 Os dados de recursos de energia e meteorologia são fornecidos gentilmente pelo projeto **NASA Prediction Of Worldwide Energy Resources (POWER)**.
 A aplicação foi projetada e refinada pelo time **Tupã** em colaboração com o espaço e desenvolvimento local.
