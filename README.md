@@ -32,40 +32,6 @@ O projeto foi desenvolvido originalmente como parte de um desafio do **NASA Spac
 
 ---
 
-## ⚙️ Como Executar o Projeto
-
-Como o projeto é construído 100% sobre tecnologias web estáticas, executá-lo é extremamente simples:
-
-### Método 1: Abertura Direta (Apenas Visualização)
-Basta dar um duplo clique no arquivo `index.html` ou arrastá-lo para dentro de qualquer navegador moderno. 
-*Nota: Devido às regras de segurança de navegadores (CORS), algumas funcionalidades de busca externa podem ser limitadas se abertas diretamente do sistema de arquivos local (`file://`). Recomendamos o Método 2.*
-
-### Método 2: Servidor Local (Recomendado)
-Para uma experiência completa e testar todas as funcionalidades locais sem restrições, use um servidor local simples:
-
-1. Se você utiliza o **VS Code**, instale a extensão **Live Server** e clique em **"Go Live"** com a pasta do projeto aberta.
-2. Caso tenha o **Python** instalado na máquina, execute o comando abaixo no terminal de dentro da pasta do projeto:
-   ```bash
-   python -m http.server 8000
-   ```
-   Depois, acesse no navegador: `http://localhost:8000`
-
----
-
-## 📂 Estrutura do Repositório
-
-```bash
-tupa/
-├── index.html               # Arquivo único da aplicação (HTML, estilos internos e scripts)
-├── Tupa_logo.svg            # Logo principal do projeto (com nome)
-├── Tupa_logo_noname.svg     # Logo compacto do projeto (sem nome, para a Navbar)
-├── space_apps.png           # Logotipo da colaboração NASA Space Apps
-├── .gitignore               # Exclusões de arquivos de sistema e ambientes de desenvolvimento
-└── README.md                # Documentação do repositório (este arquivo)
-```
-
----
-
 ## 🤝 Créditos
 
 Os dados de recursos de energia e meteorologia são fornecidos gentilmente pelo projeto **NASA Prediction Of Worldwide Energy Resources (POWER)**.
